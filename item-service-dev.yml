@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       override-none: true
-
+#端口
 server:
   port: 8001
 
