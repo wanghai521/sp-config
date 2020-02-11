@@ -18,6 +18,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+  instance: #配置注册中心的ip注册
+    prefer-ip-address: true # 使用ip进行注册
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port} # 界面列表中显示的格式也显示ip
 #网关配置
 zuul:
   #开启重试，zuul是默认不开启重试的，需要手动的开启
